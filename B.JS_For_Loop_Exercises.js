@@ -55,6 +55,80 @@ for (i = 0; i < str.length; i++) {
   }
 }
 
+// 6.	Check if a string contains the letter “y”. Print “yes” if it does and “no” if it does not.
+// let str2 = "don’t know why";
+// Example output: 
+// “yes” 
+let result= "no";
+for ( i = 0; i < str.length; i++) {
+    if (str[i] === "y") {
+      result="yes";
+      break;
+    }else{
+        result="no";
+    }
+}
 
+// 7.	Given a number n Calculate the factorial of the number
+// let n2 = 4; 4 * 3 * 2 * 1 = 24
+// Example output:
+// 24
+factorial = 1;
+for (i = 1; i <= n; i++) {
+  factorial *= i;
+}
 
+// 8.	Write a program that will allow someone to guess a four-digit pin exactly 4
+// times. If the user guesses the number correctly. It prints “That was
+// correct!” Otherwise, it will print “Sorry that was wrong.” Program stops after the 4th attempt of if they got it right.
+// let pin = 0704;
+// Example output:
+// Please make your guess: 
+// 4544 
+// Sorry that was wrong.
+// Please make your guess: 
+// 4444
+// Sorry that was wrong.
+// Please make your guess: 
+// 0704
+// That was correct!
+let pin;
+for (i = 1; i <= 4; i++) {
+  let guess = prompt("Please make your guess: ");
+  if (guess == pin) {
+    console.log("That was correct!");
+    break;
+  } else {
+    console.log("Sorry that was wrong.");
+  }
+}
+
+// 9.	Write a program that will check if two strings are palindromes. A palindrome is a word that spells the same forward and backward.
+// Palindrome: a word, phrase, or sequence that reads the same backward as
+// forward, e.g., madam or nurses run.
+// let str3 = "racecar";
+// let str4 = "Java";
+// Example output:
+// string1 palindrome?: 
+// Yes 
+// string2 palindrome?: 
+// No 
+let isPalindrome = true;
+for (let i = 0; i < str.length / 2; i++) {
+  if (str[i] !== str[str.length - i - 1]) {
+    isPalindrome = false;
+    break;
+  }
+}
+
+// 10.	This is a code wars kata. click here to train on “Grasshopper – Summation” on
+// code wars. Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+// let num1 = 2; 
+// let num2 = 8; 
+// Example output: 
+// 1 + 2 = 3
+sum=0;
+for (let i = 1; i <= num; i++) {
+  sum += i;
+}
 
