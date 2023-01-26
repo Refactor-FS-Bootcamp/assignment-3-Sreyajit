@@ -58,3 +58,82 @@ while(Math.floor(number)>0){
     sum+=Math.floor(number);
     number/=10;
 }
+
+// 10. Write a JS code to find the largest number in an array
+let largestNumber;
+for(i=0;i<arr.length;i++){
+    largestNUmber = arr[i]>largestNUmber ? arr[i] : largestNUmber;
+}
+
+// 11. Write a JS code to find the number of zeros in 2D Matrix
+let count = 0;
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = 0; j < matrix[i].length; j++) {
+      if (matrix[i][j] === 0) {
+        count++;
+      }
+    }
+}
+
+// 12. Write a JS code to find product of two arrays
+let product = 1;
+let length = Math.min(arr1.length, arr2.length);
+for (let i = 0; i < length; i++) {
+  product *= arr1[i] * arr2[i];
+}
+
+// 13. Write a JS code to print the Fibonacci series for a given value of N
+let fibonacci = [0, 1];
+for (let i = 2; i < N; i++) {
+  fibonacci.push(fibonacci[i-1] + fibonacci[i-2]);
+}
+console.log(fibonacci);
+
+// 14. Write a JS code to find N value in the Fibonacci series for a given number
+  fibonacci = [0, 1];
+  let index = 2;
+  let N;
+  while (fibonacci[index-1] <= givenNumber) {
+    let nextNum = fibonacci[index-1] + fibonacci[index-2];
+    fibonacci.push(nextNum);
+    if (nextNum === givenNumber) {
+      N = index;
+      break;
+    }
+    index++;
+  }
+
+//   15. Write a JS code to count all letters in a word
+let letters=0;
+for (let i = 0; i < word.length; i++) {
+  letters++;
+}
+
+// 16. Write a JS code to find duplicate values in a given array
+let duplicates = [];
+for (let i = 0; i < arr.length; i++) {
+  for (let j = i + 1; j < arr.length; j++) {
+    if (arr[i] === arr[j] && duplicates.indexOf(arr[i]) === -1) {
+      duplicates.push(arr[i]);
+    }
+  }
+}
+
+// 17. Write a JS code for binary search algorithm
+  let left = 0;
+  let right = arr.length - 1;
+  let indexOfItemToSearch;
+  while (left <= right) {
+    let middle = Math.floor((left + right) / 2);
+    if (arr[middle] === target) {
+        indexOfItemToSearch=middle;
+        break;
+    } else if (arr[middle] < target) {
+      left = middle + 1;
+    } else {
+      right = middle - 1;
+    }
+  }
+  if(indexOfItemToSearch==undefined) {
+    indexOfItemToSearch="Item not found";
+ }
